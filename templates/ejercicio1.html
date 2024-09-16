@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programacion Web evaluación 3</title>
+    <link rel="stylesheet" href="/static/css/estilos.css">
+</head>
+<body>
+<div class="ContenedorEjercicio1">
+    <form method="POST">
+        <div class="form-group">
+            <label for="nota1">Nota 1:</label>
+            <input type="number" name="nota1" value={{nota1}}>
+        </div>
+        <div class="form-group">
+            <label for="nota2">Nota 2:</label>
+            <input type="number" name="nota2" value={{nota2}}>
+        </div>
+        <div class="form-group">
+            <label for="nota3">Nota 3:</label>
+            <input type="number" name="nota3" value={{nota3}}>
+        </div>  
+        <div class="form-group">
+            <label for="asistencia">Asistencia (%):</label>
+            <input type="number" name="asistencia" value={{asistencia}}>
+        </div>                
+        <div class="form-group">
+        <input type="submit" value="Enviar">
+        </div>  
+    </form> 
+    {% if estado %}
+    <div>
+        <p>{{promedio}}</p>
+        <p>{{estado}}</p>        
+    </div>
+    {% endif %}
+    {% if error %}
+    <div>
+        <p>{{error}}</p>
+        <p>ingrese parametros validos</p>        
+    </div>
+    {% endif %}    
+</div>  
+</body>
+</html>
